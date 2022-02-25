@@ -65,7 +65,9 @@ Bobby's function \texttt{gramschmidt} is provided below. You can verify the code
 
 
 ```{r tidy=TRUE, eval=TRUE}
-A <- matrix(c(1, 2, 3, 4), nrow = 2, ncol = 2) #test matrix 
+A <- matrix(c(1, 2, 3, 4), nrow = 2, ncol = 2) #2 by 2 test matrix 
+B <- matrix(rnorm(9), nrow = 3, ncol = 3) #3 by 3 test matrix
+
 
 gramschmidt <- function(x) {
   # Get the number of rows and columns of the matrix
@@ -97,6 +99,6 @@ gramschmidt <- function(x) {
   return(QRdecomp)
 }
 
-
 gramschmidt(A)
+gramschmidt(B)
 ```
